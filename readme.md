@@ -1,6 +1,6 @@
 # SCSS to CSS compiler
 
-## **tags:** _Gulp, BrowserSync, SCSS, PostCSS, Autoprefixer, CSSNamo_
+**tags:** Gulp, BrowserSync, SCSS, PostCSS, Autoprefixer, CSSNamo_
 
 ## Features
 
