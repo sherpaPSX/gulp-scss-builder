@@ -1,0 +1,57 @@
+@use "sass:math";
+
+$unit: rem; // Modify this to specify your unit eg: em, pt, %.
+
+// Spacing utility generator  --------------------------------
+$directions: (
+  l: left,
+  t: top,
+  r: right,
+  b: bottom,
+  y: top,
+  x: left,
+);
+@mixin generateSpacing($prop, $short) {
+  @each $key, $val in $spacers {
+    .#{$short}-#{$key} {
+      $spacer: $rootLineHeight;
+      #{$prop}: math.div($val, $spacer) + $unit !important;
+    }
+    @each $dKey, $dVal in $directions {
+      .#{$short}#{$dKey}-#{$key} {
+        #{$prop}-#{$dVal}: math.div($val, $spacer) + $unit !important;
+        @if $key == y {
+          #{$prop}-bottom: math.div($val, $spacer) + $unit !important;
+        }
+        @if $key == x {
+          #{$prop}-right: math.div($val, $spacer) + $unit !important;
+        }
+      }
+    }
+  }
+}
+@include generateSpacing(padding, p);
+@include generateSpacing(margin, m);
+
+// Color utility Generator --------------------------------
+
+$color-list: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+);
+
+@each $key, $value in $color-list {
+  .color-#{$key} {
+    color: $value !important;
+  }
+
+  .bg-#{$key} {
+    background-color: $value !important;
+  }
+
+  .border-#{$key} {
+    border-color: $value !important;
+  }
+}
