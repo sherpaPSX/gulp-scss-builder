@@ -17,4 +17,3 @@
 
 - Edit PostCSS options in `postCssOptions` object in `gulpFile.js` file
 - Supported browsers for Autoprefixes are defined in `browserslist` object in `package.json`
--
