@@ -1,6 +1,6 @@
 # SCSS to CSS compiler
 
-**tags:** _Gulp, BrowserSync, SCSS, PostCSS, Autoprefixer, CSSNamo_
+**tags:** Gulp, BrowserSync, SCSS, PostCSS, Autoprefixer, CSSNamo
 
 ## Features
 
@@ -10,11 +10,23 @@
 
 ## Usage
 
-- `npm run dev` Start compiler with BrowserSync watcher
-- `npm run build` Production ready styles
+1. Clone repository ` git clone https://github.com/sherpaPSX/gulp-scss-builder.git`
+2. Install dependecies `npm install`
+3. Run compiler:
+
+- `npm run dev` Start compiler with BrowserSync watcher.
+- `npm run build` Production ready styles.
 
 ## Customisation
 
-- Edit PostCSS options in `postCssOptions` object in `gulpFile.js` file
-- Supported browsers for Autoprefixes are defined in `browserslist` object in `package.json`
--
+- Edit PostCSS options in `postCssOptions` object in `gulpFile.js`.
+- Supported browsers for Autoprefixes are defined in `browserslist` object in `package.json`.
+
+## Articles
+
+- https://gulpjs.com/docs/en/getting-started/quick-start
+- https://sass-lang.com/guide
+- https://github.com/postcss/postcss
+- https://cssnano.co/docs/introduction
+- https://github.com/browserslist/browserslist
+- https://browsersync.io/docs
