@@ -1,0 +1,10 @@
+@import "./00-abstracts/variables";
+@import "./99-vendors/reset";
+
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 300vh;
+  background-color: $primaryColor;
+  border-radius: 10px 5px;
+}
