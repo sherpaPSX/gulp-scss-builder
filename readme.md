@@ -13,8 +13,8 @@
 1. Clone repository ```https://github.com/sherpaPSX/gulp-scss-builder.git``` 
 2. Install dependecies `npm install`
 3. Run compiler:
-  -`npm run dev` Start compiler with BrowserSync watcher.
-  -`npm run build` Production ready styles.
+  - `npm run dev` Start compiler with BrowserSync watcher.
+  - `npm run build` Production ready styles.
 
 ## Customisation
 
