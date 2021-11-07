@@ -6,8 +6,9 @@
   "description": "",
   "main": "gulpFile.js",
   "scripts": {
-    "dev": "gulp dev",
-    "build": "gulp build"
+    "gulp": "./node_modules/.bin/gulp",
+    "dev": "node_modules/gulp/i dev",
+    "build": "./node_modules/.bin/gulp build"
   },
   "browserslist": [
     "defaults",
