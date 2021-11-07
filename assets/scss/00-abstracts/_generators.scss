@@ -14,17 +14,17 @@ $directions: (
 @mixin generateSpacing($prop, $short) {
   @each $key, $val in $spacers {
     .#{$short}-#{$key} {
-      $spacer: $rootLineHeight;
-      #{$prop}: math.div($val, $spacer) + $unit !important;
+      $spacer: $spacer;
+      #{$prop}: $val !important;
     }
     @each $dKey, $dVal in $directions {
       .#{$short}#{$dKey}-#{$key} {
-        #{$prop}-#{$dVal}: math.div($val, $spacer) + $unit !important;
+        #{$prop}-#{$dVal}: $val !important;
         @if $key == y {
-          #{$prop}-bottom: math.div($val, $spacer) + $unit !important;
+          #{$prop}-bottom: $val !important;
         }
         @if $key == x {
-          #{$prop}-right: math.div($val, $spacer) + $unit !important;
+          #{$prop}-right: $val !important;
         }
       }
     }
@@ -33,16 +33,16 @@ $directions: (
 @include generateSpacing(padding, p);
 @include generateSpacing(margin, m);
 
-// Color utility Generator --------------------------------
-
-$color-list: (
+$themeColors: (
   "primary": $primary,
   "secondary": $secondary,
   "success": $success,
   "danger": $danger,
 );
 
-@each $key, $value in $color-list {
+// Color utility Generator --------------------------------
+
+@each $key, $value in $themeColors {
   .color-#{$key} {
     color: $value !important;
   }

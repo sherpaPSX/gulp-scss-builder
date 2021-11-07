@@ -1,7 +1,8 @@
-$rootLineHeight: 16;
+$rootSize: 16;
+$baseFomtSize: 1rem;
 
 // Spacing
-$spacer: $rootLineHeight;
+$spacer: $baseFomtSize;
 $spacers: (
   0: 0,
   1: $spacer * 0.25,
@@ -12,7 +13,20 @@ $spacers: (
 ) !default;
 
 // Colors
-$primary: #0d6efd;
+$primary: #2e90ff;
 $secondary: #6c757d;
 $success: #198754;
 $danger: #dc3545;
+
+$themeColors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+);
+
+// Typography
+$rootFontSize: $rootSize + px;
+$baseLineHeight: 1.5;
+$scaleFactor: 1.5;
+$baseFontFamily: "Roboto", sans-serif;

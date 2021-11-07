@@ -14,7 +14,7 @@ const assetsFolder = "assets";
 
 // Clean assets
 function clear() {
-  return src(`${publicFolder}/css/`, {
+  return src(`${publicFolder}/css/*`, {
     read: false,
   }).pipe(clean());
 }
@@ -27,7 +27,7 @@ const postCssOptions = [
 ];
 // CSS functions
 function styles() {
-  return src(sassSourceFile)
+  return src(sassSourceFile, { allowEmpty: true })
     .pipe(sass())
     .pipe(sourcemaps.init())
     .pipe(
@@ -42,7 +42,7 @@ function styles() {
 
 // CSS functions
 function stylesProd() {
-  return src(sassSourceFile)
+  return src(sassSourceFile, { allowEmpty: true })
     .pipe(sass())
     .pipe(
       sass().on("error", function (err) {

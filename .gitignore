@@ -9,4 +9,5 @@ desktop.ini
 ._*
 
 dist
+public/css
 node_modules
