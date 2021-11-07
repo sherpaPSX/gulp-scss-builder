@@ -28,4 +28,4 @@ jobs:
 
     - name: Build
       run: |
-        npm run build
+        npm link gulp && npm run build
