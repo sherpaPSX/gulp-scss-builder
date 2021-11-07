@@ -9,12 +9,12 @@ const clean = require("gulp-clean");
 const cssnano = require("cssnano");
 
 const sassSourceFile = "assets/scss/styles.scss";
-const publicFolder = "dist";
+const publicFolder = "public";
 const assetsFolder = "assets";
 
 // Clean assets
 function clear() {
-  return src(publicFolder, {
+  return src(`${publicFolder}/css/`, {
     read: false,
   }).pipe(clean());
 }
@@ -36,7 +36,7 @@ function styles() {
       })
     )
     .pipe(sourcemaps.write("."))
-    .pipe(dest(publicFolder))
+    .pipe(dest(`${publicFolder}/css/`))
     .pipe(browserSync.stream());
 }
 
@@ -50,7 +50,7 @@ function stylesProd() {
       })
     )
     .pipe(postcss(postCssOptions))
-    .pipe(dest(publicFolder));
+    .pipe(dest(`${publicFolder}/css/`));
 }
 
 // Watch files
@@ -63,7 +63,7 @@ function watchFiles() {
 function serve() {
   browserSync.init({
     server: {
-      baseDir: "./",
+      baseDir: "./public",
     },
     port: 3000,
   });
