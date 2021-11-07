@@ -1,13 +1,13 @@
 {
   "name": "css-builder",
   "version": "1.0.0",
-  "author": "Lukas 'Sherpa' Werner",
+  "author": "",
   "license": "ISC",
   "description": "",
   "main": "gulpFile.js",
   "scripts": {
     "gulp": "./node_modules/.bin/gulp",
-    "dev": "node_modules/gulp/i dev",
+    "dev": "./node_modules/.bin/gulp dev",
     "build": "./node_modules/.bin/gulp build"
   },
   "browserslist": [
@@ -21,16 +21,17 @@
     "cssnano": "^5.0.9",
     "del": "^6.0.0",
     "fancy-log": "^1.3.3",
+    "gulp": "github:gulpjs/gulp",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^1.4.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.32.13",
-    "gulp": "3.9.1"
+    "sass": "^1.32.13"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.3.11"
   }
 }
